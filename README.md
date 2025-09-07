@@ -68,4 +68,4 @@ Each model is trained on TF-IDF features and evaluated using:
 
 1. Clone the repository:
 ```bash
-git clone <repository_url>
+git clone <https://github.com/Tanishq758/IMDb-Sentiment-Analysis-ML/tree/main>
