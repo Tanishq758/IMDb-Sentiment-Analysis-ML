@@ -1,43 +1,71 @@
-# IMDb-Sentiment-Analysis-ML
-Sentiment analysis of IMDb movie reviews using classical machine learning models: Logistic Regression, Naive Bayes, and SVM
-This repository contains a sentiment analysis project on the IMDb Large Movie Review Dataset. It focuses on traditional machine learning approaches to classify movie reviews as positive or negative.
+# IMDb Movie Review Sentiment Analysis
 
-The project includes:
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.2-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Data Loading & Cleaning – All reviews are preprocessed to remove HTML tags, URLs, numbers, punctuation, and extra spaces.
+This project performs **sentiment analysis** on movie reviews from the [IMDb Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/). The goal is to classify reviews as **positive** or **negative** using **machine learning models**.
 
-Feature Extraction – TF-IDF vectorization is applied to convert text reviews into numerical features.
+---
 
-Model Training & Evaluation – Three classical models are implemented:
+## Dataset
 
-Logistic Regression
+- **Source:** [IMDb Large Movie Review Dataset](https://ai.stanford.edu/~amaas/data/sentiment/)
+- **Size:** 50,000 reviews (25,000 positive, 25,000 negative)
+- **Split:** Train (25,000), Test (25,000)
+- **Format:** Text files organized in `pos` and `neg` directories
+- **Labels:** 0 = Negative, 1 = Positive
 
-Multinomial Naive Bayes
+---
 
-Support Vector Machine (LinearSVC)
+## Preprocessing
 
-For each model, the repository outputs Accuracy, F1 Score, and a detailed classification report.
+Text preprocessing includes:
 
-Features:
+- Lowercasing
+- Removing HTML tags
+- Removing URLs
+- Removing numbers and punctuation
+- Removing extra whitespace
 
-Fully preprocessed IMDb reviews
+---
 
-TF-IDF feature extraction
+## Feature Extraction
 
-Multiple ML models for comparison
+- **Method:** TF-IDF Vectorization
+- **Max Features:** 20,000
+- **Stop Words:** English
 
-Evaluation metrics included
+---
 
-Getting Started:
+## Models Implemented
 
-Download the IMDb dataset: IMDb Large Movie Review Dataset
+1. **Logistic Regression**
+2. **Multinomial Naive Bayes**
+3. **Linear Support Vector Machine (SVM)**
 
-Set the dataset path in the notebook/code (aclImdb/train and aclImdb/test).
+Each model is trained on TF-IDF features and evaluated using:
 
-Run the notebook/script sequentially to train models and view results.
+- Accuracy
+- F1 Score
+- Classification Report
 
-Dependencies:
+---
 
-Python 3.x
+## Example Results
 
-pandas, numpy, scikit-learn
+| Model                 | Accuracy | F1 Score |
+|-----------------------|----------|----------|
+| Logistic Regression   | 88%      | 88%      |
+| Naive Bayes           | 84%      | 84%      |
+| Linear SVM            | 89%      | 89%      |
+
+> Results may vary depending on train-test split and random seed.
+
+---
+
+## Usage
+
+1. Clone the repository:
+```bash
+git clone <repository_url>
