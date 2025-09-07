@@ -56,9 +56,9 @@ Each model is trained on TF-IDF features and evaluated using:
 
 | Model                 | Accuracy | F1 Score |
 |-----------------------|----------|----------|
-| Logistic Regression   | 88%      | 88%      |
-| Naive Bayes           | 84%      | 84%      |
-| Linear SVM            | 89%      | 89%      |
+| Logistic Regression   | 89%      | 89%      |
+| Naive Bayes           | 86%      | 85%      |
+| Linear SVM            | 88%      | 88%      |
 
 > Results may vary depending on train-test split and random seed.
 
